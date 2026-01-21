@@ -67,11 +67,24 @@ const Hero = ( darkMode ) => {
                     data-aos-delay = '500'>
                         Hi, I'm Nethmi Nanayakkara
                 </h1>
-                <p>
-                  I am a passionate Full-Stack Developer
-                  driven by a desire to create impactful
-                  and user-centric digital experiences.  
+                <p className={`mb-6 sm:mb-8 leading-relaxed max-w-md
+                    sm:max-w-lg ${theme.textSecondary}`}
+                    data-aos='fade-up'
+                    data-os-dela='600'>
+                  As a Full-Stack Developer, I thrive on the 
+                  challenge of managing the entire lifecycle 
+                  of an application. From designing responsive 
+                  user interfaces to optimizing server-side 
+                  logic and databases, I focus on writing 
+                  clean, maintainable code. I am passionate 
+                  about leveraging modern technologies to solve 
+                  real-world problems and delivering scalable 
+                  solutions that provide value to users.  
                 </p>
+                {/* Buttons */}
+                <div>
+
+                </div>
                 </div>
             </div>
         </section>
