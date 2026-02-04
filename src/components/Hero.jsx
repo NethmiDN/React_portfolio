@@ -1,14 +1,18 @@
 import instagram from "../assets/Instagram.png"
 import facebook from "../assets/facebook.png"
 import github from "../assets/github.png"
+import linkedin from "../assets/linkedin.png"
+import hero from "../assets/hero.png"
+import hi from "../assets/hi.png"
 import CV from "../assets/CV.pdf"
-import { DownloadIcon } from "lucide-react";
+import { DownloadIcon, Mail } from "lucide-react";
 
 const Hero = ({ darkMode = false }) => {
     const socialIcons = [
         {icon: instagram, alt: 'Instagram'},
         {icon: facebook, alt: 'Facebook'},
         {icon: github, alt: 'Github'},
+        {icon: linkedin, alt: 'LinkedIn'},
 
     ];
 
@@ -92,23 +96,59 @@ const Hero = ({ darkMode = false }) => {
                         <a href={CV} download className='w-full sm:w-auto'>
                             <button className='w-full sm:w-auto
                             inline-flex items-center justify-center text-white
-                            bg-linear-to-r from-orange-500 to-amber-500 border-0
-                            py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0,7)]
-                            rounded-full text-base sm:text-lg font-semibold transition-all
+                            bg-gradient-to-r from-orange-500 to-amber-500 border-0
+                            py-3 px-6 sm:px-8 hover:shadow-[0_0_30px_rgba(255,165,0,0.45)]
+                            hover:-translate-y-0.5 rounded-full text-base sm:text-lg font-semibold transition-all
                             duration-300 transform'>
                                 <DownloadIcon className='w-4 h-4 sm:h-5 sm:w-5 mr-2'/>
                                 Download CV
                             </button>
                         </a>
-                        <a href="#contact">
-                            
+                        <a href="#contact" className='w-full sm:w-auto'>
+                            <button className={`w-full sm:w-auto
+                            inline-flex items-center ${theme.buttonSecondary} justify-center 
+                            text-white border-0
+                            py-3 px-6 sm:px-8 hover:shadow-[0_0_30px_rgba(255,165,0,0.45)]
+                            hover:-translate-y-0.5 rounded-full text-base sm:text-lg font-semibold transition-all
+                            duration-300 transform`}>
+                                <Mail className='w-4 h-4 sm:w-5 sm:h-5 mr-2'/>
+                                Contact Me
+                                </button>
                         </a>
                     </div>
                 </div>
                 </div>
+                {/* {Image} */}
+                <div 
+                className='lg:w-1/2 w-full max-w-md lg:max-w-lg mt-8
+                lg:mt-0 flex justify-center'
+                data-aos='fade-left'
+                data-aos-delay='400'
+                >
+                    <div className='relative w-4/5 sm:w-3/4 lg:w-full'>
+                    <div className='relative overflow-hidden'>
+                        <img 
+                        src={hero}
+                        alt="Hero Image"
+                        className='w-full h-auto object-cover transform
+                        hover:scale-105 transition-transform duration-500'/>
+                    </div>
+                    <img 
+                    src={hi} 
+                    alt="Hi icon"
+                    className='absolute -top-4 sm:top-4 left-6
+                    sm:left-20 w-14 h-14 sm:w-20 sm:h-20 object-contain
+                    animate-bounce opacity-90 z-10'/>
+                    </div>
+                </div>
+            </div>
+            <div className={`absolute -top-20 -left-20 w-40 h-40
+                sm:w-64 sm:h-64 ${theme.decorativeCircle} rounded-full
+                mix-blend-multiply filter blur-3xl opacity-10
+                animate-pulse delay-1000 hidden sm:block`}>
+
             </div>
         </section>
-      
     </div>
   )
 }
