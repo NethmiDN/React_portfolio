@@ -6,7 +6,7 @@ const About = (darkMode) => {
         darkMode ? 'bg-gray-900' : 'gb-gray-50'
     }`}>
 
-    </section>>
+    </section>
   )
 }
 
