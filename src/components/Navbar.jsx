@@ -66,7 +66,7 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                     {navItems.map((item) => (
                         <a 
                         key={item.name}
-                        href={item.link}
+                        href={item.id}
                         onClick={() => handleNavClick(item.name)}
                         className="relative"
                         >
@@ -165,7 +165,7 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                             {navItems.map((item) => (
                                 <a
                                 key={item.name}
-                                href={item.link}
+                                href={item.id}
                                 onClick={() => handleNavClick(item.name)}
                                 className='block'>
                                     <motion.div
