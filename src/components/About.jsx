@@ -25,6 +25,59 @@ const About = ({ darkMode }) => {
           </div>
 
         </figure>
+        <article
+        data-aos = 'fade-left'
+        data-aos-delay = '300'
+        className='text-center lg:text-left relative order-l
+        lg:order-2'>
+          <header>
+            <h1 className='text-3xl sm:text-4xl lg:text-5xl
+            xl:text-6xl font-bold mb-4 sm:mb-6
+            text-transparent bg-linear-to-r from-orange-400
+            to-orange-600 bg-clip-text'
+            data-aos = 'fade-up'
+            data-aos-delay = '400'>
+              About Me
+            </h1>
+            </header>
+            <p className={`text-sm sm:text-base lg:text-lg
+              xl:text-xl mb-6 sm:mb-8 leading-relaxed
+              bg-linear-to-r from-orange-900/10 to-orange-900/5
+              p-4 sm:p-6 rounded-xl sm:rounded-2xl
+              backdrop-blur-sm
+              ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}
+              data-aos = 'fade-up'
+              data-aos-delay = '500'>
+              I’m a passionate software developer who enjoys building clean, 
+              user-friendly, and efficient applications. I have hands-on 
+              experience with Java, JavaFX, MySQL, and modern web technologies 
+              like JavaScript, TypeScript, React, and Node.js. I love 
+              turning ideas into real, working solutions and continuously 
+              learning new technologies to improve my skills.
+            </p>
+            <div className='flex flex-col gap-3 sm:gap-4 lg:gap-5 mb-6 sm:mb-8'>
+              <h2 className={`text-lg sm:text-xl lg:text-2xl font-semibold
+                ${darkMode ? 'text-white' : 'text-gray-900'}`}
+                data-aos='fade-up'
+                data-aos-delay='550'>
+                Tech Skills
+              </h2>
+              <div
+                className='flex flex-wrap justify-center lg:justify-start
+                gap-2 sm:gap-3 lg:gap-4'
+                data-aos='zoom-in'
+                data-aos-delay='600'>
+                {["Java","MongoDB","MySQL","JavaScript","TypeScript","React","Node.js","Express","Tailwind CSS","Git/GitHub"].map((skill) => (
+                  <span
+                    key={skill}
+                    className={`px-3 py-2 rounded-full text-sm sm:text-base font-medium border
+                    ${darkMode ? 'border-orange-400/50 text-orange-100 bg-orange-500/10' : 'border-orange-200 text-orange-700 bg-orange-50'}`}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+        </article>
 
       </div>
 
