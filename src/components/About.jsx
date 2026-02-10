@@ -1,3 +1,4 @@
+import about from '../assets/about.png';
 
 const About = ({ darkMode }) => {
   return (
@@ -13,11 +14,14 @@ const About = ({ darkMode }) => {
         className="flex flex-wrap justify-center gap-4 relative 
         order-2 lg:order-1">
           <div className="relative w-72 h-72 lg:w-96 lg:h-96">
-            {/* Decorative star background */}
-            <div className="absolute -inset-10 lg:-inset-16
-            bg-gradient-to-br from-[#f97316] via-[#fb923c]
-            to-[#f59e0b] rotate-12 star-shape z-0 shadow-2xl">
-            </div>
+            <img 
+            src={about}
+            alt="About Image"
+            className='w-full h-full object-cover rounded-2xl shadow-xl
+            transition-transform duration-300'
+            data-aos = 'zoom-in'
+            data-aos-delay = '400'
+            />
           </div>
 
         </figure>
