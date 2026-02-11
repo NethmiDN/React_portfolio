@@ -1,5 +1,5 @@
 import { text } from 'framer-motion/client';
-import {useState} from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 
@@ -40,6 +40,29 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
         setActiveSection(itemName.toLowerCase());
         setIsMenuOpen(false);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY + 140; // offset for navbar height
+            let currentSection = 'home';
+
+            navItems.forEach((item) => {
+                const section = document.querySelector(item.id);
+                if (!section) return;
+
+                const { offsetTop, offsetHeight } = section;
+                if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                    currentSection = item.name.toLowerCase();
+                }
+            });
+
+            setActiveSection(currentSection);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [navItems]);
   return (
     <div className='flex justify-center w-full fixed z-50 mt-4'>
         <motion.nav

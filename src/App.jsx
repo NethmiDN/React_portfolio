@@ -18,6 +18,13 @@ const App = () => {
   }, [])
 
   useEffect(() => {
+    if (window.location.hash !== '#home') {
+      window.history.replaceState(null, '', '#home');
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, []);
+
+  useEffect(() => {
     AOS.refresh()
   }, [darkMode])
 
