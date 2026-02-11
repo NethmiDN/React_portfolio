@@ -4,13 +4,14 @@ import project3 from '../assets/project3.jpeg';
 import project4 from '../assets/project4.png';
 import project5 from '../assets/project5.png';
 import project6 from '../assets/project6.jpeg';
+import { FaGithub } from 'react-icons/fa';
 
 const Projects = ({darkMode}) => {
     const projects = [
         {
             id: 1,
             title: 'AI-Powered Interview Preparation Platform',
-            desc: 'A full-stack MERN application that helps candidates prepare for interviews through AI-powered mock interview simulations. Features include secure JWT authentication, dynamic interview question generation using Google Gemini API, text-to-speech and speech-to-text capabilities, community post sharing, and a responsive UI with dark mode support. Built with TypeScript, React, Node.js, Express, MongoDB, and deployed on Vercel',
+            desc: 'InterviewAce is a TypeScript MERN application using AI for interactive mock interviews, question generation, and preparation.',
             image: project1 ,
             tags: ['React', 'Node.js', 'MongoDB', 'AI']
 
@@ -18,7 +19,7 @@ const Projects = ({darkMode}) => {
         {
             id: 2,
             title: 'Dog Adoption & Care Platform',
-            desc: 'A full-stack web application that helps people find, adopt, and care for dogs. Features include user authentication (email/password + Google OAuth2), lost & found reporting, owner-to-user messaging, product listings with orders, password recovery, and an AI-powered chatbot assistant. Built with Spring Boot, MySQL, and a responsive Bootstrap frontend.',
+            desc: 'Full-stack Java web application for dog adoption, lost and found tracking, messaging, and AI pet assistance.',
             image: project2 ,
             tags: ['Springboot', 'MySQL', 'Bootstrap', 'AI']
 
@@ -26,7 +27,7 @@ const Projects = ({darkMode}) => {
         {
             id: 3,
             title: 'Pizzeria Mobile App',
-            desc: 'A cross-platform mobile application built with React Native and Expo for browsing pizzas and combos. It features a file-based navigation system, persistent shopping cart management, user authentication via Firebase, and a checkout flow with saved delivery locations.',
+            desc: 'A React Native pizza ordering app using Expo, Firebase, and NativeWind for cart management and checkout.',
             image: project3 ,
             tags: ['React Native', 'Expo', 'Firebase', 'Tailwind CSS']
         },
@@ -40,14 +41,14 @@ const Projects = ({darkMode}) => {
         {
             id: 5,
             title: 'Pet Item Marketplace',
-            desc: 'A comprehensive e-commerce Figma design for a pet marketplace, featuring intuitive navigation, high-quality product showcases, and a streamlined checkout process. Designed with pet owners in mind, it includes organized categories for food, toys, and grooming, along with a personalized pet profile section.',
+            desc: 'Comprehensive pet marketplace Figma design with intuitive navigation, product showcases, streamlined checkout, categories, and pet profiles.',
             image: project5 ,
             tags: ['Figma', 'UI/UX Design', 'Prototyping']
         },
         {
             id: 6,
             title: 'Mental Health Therapy Center Management System',
-            desc: 'A comprehensive JavaFX-based desktop application designed to streamline the operations of a mental health therapy center. The system features a robust management module for therapists, patients, therapy sessions, and programs, integrated with a secure payment processing system. Built using a layered architecture, it ensures efficient data handling and a modern user interface for clinic administrators.',
+            desc: 'A JavaFX and Hibernate-based mental health therapy center management system for patients, therapists and payments.',
             image: project6 ,
             tags: ['JavaFX', 'MySQL', 'JavaMail', 'Layered Architecture']
         },
@@ -101,7 +102,58 @@ const Projects = ({darkMode}) => {
                     data-aos='fade-up'
                     data-aos-delay={index * 100}>
                         <div className='h-36 overflow-hidden rounded-t-xl'>
-
+                            <img 
+                            src={project.image}
+                            alt={project.title}
+                            className='w-full h-full object-cover
+                            group-hover:scale-110 transition-transform
+                            duration-500'></img>
+                        </div>
+                        <div className='p-4'>
+                        <h3
+                        className='text-lg font-bold mb-2'
+                        style={{
+                            color: darkMode ? 'white' : '#1f2937'
+                        }}>
+                            {project.title}
+                        </h3>
+                        <p
+                        className='text-sm mb-3'
+                        style={{
+                            color: darkMode ? '#d1d5db' : '6b7280'
+                        }}>
+                            {project.desc}
+                        </p>
+                        <div className='flex flex-wrap gap-1.5 mb-4'>
+                            {project.tags.map((tag, idx) => (
+                                <span
+                                key={idx}
+                                style={{
+                                    backgroundColor: darkMode ? '#374151' : '#f3f4f6' , 
+                                    color: darkMode ? '#d1d5db' : '#4b5563'
+                                }}
+                                className='px-2 py-1 text-xs rounded-full'>
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                        <div className='flex gap-2'>
+                            <a href='#'
+                            style={{
+                                backgroundColor: darkMode ? '#374151' : '#f3f4f6',
+                                color: darkMode ? 'white' : '#374151'
+                            }}
+                            className='flex-1 flex items-center
+                            justify-center gap-1.5 px-3 py-2
+                            text-sm rounded-lg hover:opacity-90
+                            transition-colors'
+                            data-aos='zoom-in'
+                            data-aos-delay='300'
+                            >
+                                <FaGithub className='text-sm'/>
+                                <span>Code</span>
+                            </a>
+                        </div>
                         </div>
 
                     </div>
