@@ -50,10 +50,8 @@ const About = ({ darkMode }) => {
               data-aos-delay = '500'>
               I’m a passionate software developer who enjoys building clean, 
               user-friendly, and efficient applications. I have hands-on 
-              experience with Java, JavaFX, MySQL, and modern web technologies 
-              like JavaScript, TypeScript, React, and Node.js. I love 
-              turning ideas into real, working solutions and continuously 
-              learning new technologies to improve my skills.
+              experience with Java, MongoDB, MySQL, and modern web technologies 
+              like JavaScript, TypeScript, React, and Node.js.
             </p>
             <div className='flex flex-col gap-3 sm:gap-4 lg:gap-5 mb-6 sm:mb-8'>
               <h2 className={`text-lg sm:text-xl lg:text-2xl font-semibold
@@ -77,6 +75,21 @@ const About = ({ darkMode }) => {
                 ))}
               </div>
             </div>
+            <button 
+            className={`w-full sm:w-auto border-2 border-orange-500
+            inline-flex items-center justify-center 
+            border-0 py-2 px-4 sm:px-6 
+            hover:shadow-[0_0_30px_rgba(255,165,0,0.45)]
+            hover:-translate-y-0.5 rounded-full text-base 
+            sm:text-lg font-semibold transition-all
+            duration-300 transform ${darkMode 
+            ? 'text-white bg-orange-500/10' 
+            : 'text-gray-800 bg-white/90'}`}
+            data-aos='fade-up'
+            data-aos-delay='800'
+            >
+            Learn More
+            </button>
         </article>
 
       </div>
