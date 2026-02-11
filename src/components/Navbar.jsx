@@ -152,20 +152,14 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                     <motion.button
                     whileTap={{ scale: 0.9 }}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className={`p-2 rounded-lg ${darkMode
-                        ? 'bg-gray-700'
-                        : 'bg-gray-200'
+                    className={`p-2.5 rounded-full border shadow-lg transition-colors ${darkMode
+                        ? 'bg-gray-900 border-white/20 text-white'
+                        : 'bg-white border-orange-300/80 text-gray-900'
                     }`}>
                         {isMenuOpen ? (
-                            <X className={`w-5 h-5 ${darkMode
-                                ? 'text-white'
-                                : 'text-gray-700'
-                            }`}/>
+                            <X className="w-6 h-6"/>
                         ) : (
-                            <Menu className={`w-5 h-5 ${darkMode
-                                ? 'text-white'
-                                : 'text-gray-700'
-                            }`}/>
+                            <Menu className="w-6 h-6"/>
                         )}
                     </motion.button>
                 </div>
@@ -176,14 +170,14 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                 animate={{ opacity: 1 , height: 'auto'}}
                 exit={{ opacity: 0 , height: 0}}
                 transition={{duration: 0.3}}
-                className={`absolute top-full left-0 right-0 mt-2 lg:hidden
+                className={`absolute top-full left-0 right-0 mt-2 lg:hidden w-full
                     ${darkMode
-                        ? 'bg-gray-900/95'
-                        : 'bg-white/95'
-                    }backdrop-blur-lg rounded-xl shadow-lg border ${
-                        darkMode ? 'border-gray-700' : 'border-gray-200'
+                        ? 'bg-gray-900/98'
+                        : 'bg-white/98'
+                    } backdrop-blur-lg rounded-xl shadow-2xl border ${
+                        darkMode ? 'border-white/10' : 'border-orange-200/70'
                     }`}>
-                        <div className='px-4 py-3 space-y-2'>
+                        <div className='px-4 py-4 space-y-2'>
                             {navItems.map((item) => (
                                 <a
                                 key={item.name}
@@ -191,15 +185,16 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                                 onClick={() => handleNavClick(item.name)}
                                 className='block'>
                                     <motion.div
-                                    whileHover={{x: 5}}
-                                    className={`py-3 px-4 rounded-lg text-center
-                                    ${
+                                    whileHover={{x: 6}}
+                                    className={`py-3 px-4 rounded-lg text-center border ${
+                                        darkMode ? 'border-white/10' : 'border-orange-100'
+                                    } ${
                                         activeSection === item.name.toLocaleLowerCase()
-                                        ? darkMode ? 'bg-gray-800' : 'bg-orange-50'
-                                        : ''
+                                        ? darkMode ? 'bg-gray-800/80' : 'bg-orange-50'
+                                        : 'bg-transparent'
                                     }`}>
                                         <span
-                                        className={`font-medium ${
+                                        className={`font-semibold ${
                                             activeSection === item.name.toLocaleLowerCase()
                                             ? colors.textActive
                                             : colors.textSecondary
@@ -215,7 +210,7 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                                 whileTap={{scale: 0.95}}
                                 className={`block py-3 px-4 text-center font-semibold
                                 rounded-lg bg-linear-to-r ${colors.button}
-                                text-white shadow-md`}>
+                                text-white shadow-md border border-transparent`}>
                                     Hire Me
                                 </motion.a>
                         </div>
