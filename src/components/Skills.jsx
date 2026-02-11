@@ -50,14 +50,21 @@ const Skills = ({ darkMode }) => {
         className='text-center lg:text-left relative order-l
         lg:order-2'>
           <header>
-            <h1 className='text-3xl sm:text-4xl lg:text-5xl
-            xl:text-6xl font-bold mb-4 sm:mb-6
-            text-transparent bg-linear-to-r from-orange-400
-            to-orange-600 bg-clip-text'
-            data-aos = 'fade-up'
-            data-aos-delay = '400'>
-              Skills
-            </h1>
+            <h2 
+                className='text-3xl sm:text-4xl font-bold mb-3'
+                style={{
+                    color: darkMode ? 'white' : '#1f2937'
+                }}>
+                My <span
+                style={{
+                    background: 'linear-gradient(to right, #f97316,  #f59e0b)',
+                    WebkitBackgroundClip: 'text' ,
+                    backgroundClip: 'text' ,
+                    color: 'transparent'
+                }}>
+                    Skills
+                </span>
+                </h2>
             </header>
             <div className='flex flex-col gap-3 sm:gap-4 lg:gap-5 mb-6 sm:mb-8'>
               <div
