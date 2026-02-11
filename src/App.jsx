@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Hero from "./components/Hero";
