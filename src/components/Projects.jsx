@@ -13,7 +13,8 @@ const Projects = ({darkMode}) => {
             title: 'AI-Powered Interview Preparation Platform',
             desc: 'InterviewAce is a TypeScript MERN application using AI for interactive mock interviews, question generation, and preparation.',
             image: project1 ,
-            tags: ['React', 'Node.js', 'MongoDB', 'AI']
+            tags: ['React', 'Node.js', 'MongoDB', 'AI'],
+            repo: 'https://github.com/NethmiDN/InterviewAce_FE.git'
 
         },
         {
@@ -21,7 +22,8 @@ const Projects = ({darkMode}) => {
             title: 'Dog Adoption & Care Platform',
             desc: 'Full-stack Java web application for dog adoption, lost and found tracking, messaging, and AI pet assistance.',
             image: project2 ,
-            tags: ['Springboot', 'MySQL', 'Bootstrap', 'AI']
+            tags: ['Springboot', 'MySQL', 'Bootstrap', 'AI'],
+            repo: 'https://github.com/NethmiDN/Bark_Buddy.git'
 
         },
         {
@@ -29,28 +31,32 @@ const Projects = ({darkMode}) => {
             title: 'Pizzeria Mobile App',
             desc: 'A React Native pizza ordering app using Expo, Firebase, and NativeWind for cart management and checkout.',
             image: project3 ,
-            tags: ['React Native', 'Expo', 'Firebase', 'Tailwind CSS']
+            tags: ['React Native', 'Expo', 'Firebase', 'Tailwind CSS'],
+            repo: 'https://github.com/NethmiDN/pizzeria.git'
         },
         {
             id: 4,
             title: 'Luxury Hotel Website',
             desc: 'A responsive and modern multi-page website designed for the "Uppermost Jumeirah" luxury resort in Dubai.',
             image: project4 ,
-            tags: ['CSS3', 'Bootstrap', 'JavaScript', 'Firebase']
+            tags: ['CSS3', 'Bootstrap', 'JavaScript', 'Firebase'],
+            repo: 'https://github.com/NethmiDN/Hotel-Site.git'
         },
         {
             id: 5,
             title: 'Pet Item Marketplace',
             desc: 'Comprehensive pet marketplace Figma design with intuitive navigation, product showcases, streamlined checkout, categories, and pet profiles.',
             image: project5 ,
-            tags: ['Figma', 'UI/UX Design', 'Prototyping']
+            tags: ['Figma', 'UI/UX Design', 'Prototyping'],
+            repo: 'https://www.figma.com/design/LEOKfxlZLN5YvF9OTGkgjV/Nethmi-Nanayakkara-GDSE72-SWE-Practical?node-id=0-1&t=pcBcxTsFUoTEDf8V-1'
         },
         {
             id: 6,
             title: 'Mental Health Therapy Center Management System',
             desc: 'A JavaFX and Hibernate-based mental health therapy center management system for patients, therapists and payments.',
             image: project6 ,
-            tags: ['JavaFX', 'MySQL', 'JavaMail', 'Layered Architecture']
+            tags: ['JavaFX', 'MySQL', 'JavaMail', 'Layered Architecture'],
+            repo: 'https://github.com/NethmiDN/Serene-Mental-Health-Therapy-Center.git'
         },
     ]
   return (
@@ -137,7 +143,9 @@ const Projects = ({darkMode}) => {
                             ))}
                         </div>
                         <div className='flex gap-2'>
-                            <a href='#'
+                            <a href={project.repo || '#'}
+                            target='_blank'
+                            rel='noreferrer'
                             style={{
                                 backgroundColor: darkMode ? '#374151' : '#f3f4f6',
                                 color: darkMode ? 'white' : '#374151'
@@ -152,21 +160,6 @@ const Projects = ({darkMode}) => {
                                 <FaGithub className='text-sm'/>
                                 <span>Code</span>
                             </a>
-                            {/* Demo */}
-                            <a href='#'
-                            style={{
-                                background: 'linear-gradient(to right, #f97316 , #f59e0b)',
-                            }}
-                            className='flex-1 flex items-center
-                            justify-center gap-1.5 px-3 py-2 text-white
-                            text-sm rounded-lg hover:shadow-lg 
-                            hover:shadow-orange-500/25 transition-all'
-                            data-aos='zoom-in'
-                            data-aos-delay='400'
-                            >
-                                <FaExternalLinkAlt className='text-sm'/>
-                                <span>Demo</span>
-                            </a>
                         </div>
                         </div>
                     </div>
@@ -174,7 +167,7 @@ const Projects = ({darkMode}) => {
             </div>
             <div
             className='text-center mt-10'>
-                <a href='#'
+                <a href='https://github.com/NethmiDN'
                 style={{
                     background: 'linear-gradient(to right, #f97316 , #f59e0b)',
                 }}
