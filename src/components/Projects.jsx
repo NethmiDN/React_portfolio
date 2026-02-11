@@ -93,7 +93,7 @@ const Projects = ({darkMode}) => {
                     style={{
                         background: darkMode
                         ? 'linear-gradient(to right, #1f2937,  #111827)'
-                        : 'linear-gradient(to right, #ffffff,  #f59e0b)',
+                        : 'linear-gradient(to right, #ffffff,  #fff7ed)',
                         borderColor: darkMode ? '#374151' : '#e5e7eb'
                     }}
                     className='group rounded-xl border duration-300
@@ -119,7 +119,7 @@ const Projects = ({darkMode}) => {
                         <p
                         className='text-sm mb-3'
                         style={{
-                            color: darkMode ? '#d1d5db' : '6b7280'
+                            color: darkMode ? '#d1d5db' : '#374151'
                         }}>
                             {project.desc}
                         </p>
