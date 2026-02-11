@@ -3,6 +3,7 @@ import project2 from '../assets/project2.png';
 import project3 from '../assets/project3.jpeg';
 import project4 from '../assets/project4.png';
 import project5 from '../assets/project5.png';
+import project6 from '../assets/project6.jpeg';
 
 const Projects = ({darkMode}) => {
     const projects = [
@@ -43,6 +44,13 @@ const Projects = ({darkMode}) => {
             image: project5 ,
             tags: ['Figma', 'UI/UX Design', 'Prototyping']
         },
+        {
+            id: 6,
+            title: 'Mental Health Therapy Center Management System',
+            desc: 'A comprehensive JavaFX-based desktop application designed to streamline the operations of a mental health therapy center. The system features a robust management module for therapists, patients, therapy sessions, and programs, integrated with a secure payment processing system. Built using a layered architecture, it ensures efficient data handling and a modern user interface for clinic administrators.',
+            image: project6 ,
+            tags: ['JavaFX', 'MySQL', 'JavaMail', 'Layered Architecture']
+        },
         
     ]
   return (
@@ -72,10 +80,32 @@ const Projects = ({darkMode}) => {
                 <p
                 className='max-w-xl mx-auto'
                 style={{
-                    color: darkMode ? '#d1d5db' : '6b7280'
+                    color: darkMode ? '#d1d5db' : '#6b7280'
                 }}>
                     A showcase of my recent work
                 </p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2
+            lg:grid-cols-3 gap-5 mb-12'>
+                {projects.map((project, index) => (
+                    <div
+                    key={project.id}
+                    style={{
+                        background: darkMode
+                        ? 'linear-gradient(to right, #1f2937,  #111827)'
+                        : 'linear-gradient(to right, #ffffff,  #f59e0b)',
+                        borderColor: darkMode ? '#374151' : '#e5e7eb'
+                    }}
+                    className='group rounded-xl border duration-300
+                    hover:border-orange-500/50 transition-all'
+                    data-aos='fade-up'
+                    data-aos-delay={index * 100}>
+                        <div className='h-36 overflow-hidden rounded-t-xl'>
+
+                        </div>
+
+                    </div>
+                ))}
 
             </div>
 
