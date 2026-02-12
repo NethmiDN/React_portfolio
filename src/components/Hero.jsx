@@ -9,10 +9,10 @@ import { DownloadIcon, Mail } from "lucide-react";
 
 const Hero = ({ darkMode = false }) => {
     const socialIcons = [
-        {icon: instagram, alt: 'Instagram'},
-        {icon: facebook, alt: 'Facebook'},
         {icon: github, alt: 'Github'},
         {icon: linkedin, alt: 'LinkedIn'},
+        {icon: facebook, alt: 'Facebook'},
+        {icon: instagram, alt: 'Instagram'},
 
     ];
 
