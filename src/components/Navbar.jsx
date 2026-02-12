@@ -105,7 +105,7 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                         </motion.span>
                         {activeSection === item.name.toLowerCase() && (
                             <motion.div
-                            layoutId='navbar-indicator'
+                            layoutId='Navbar-indicator'
                             className={`absolute -bottom-1 left-0
                             right-0 h-0.5 bg-linear-to-r rounded-full
                             ${colors.indicator}`}>
