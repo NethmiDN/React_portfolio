@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 
-const Navbar = ({darkMode, toggleDarkMode}) => {
+const navbar = ({darkMode, toggleDarkMode}) => {
     const [activeSection, setActiveSection] = useState('home');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -105,7 +105,7 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                         </motion.span>
                         {activeSection === item.name.toLowerCase() && (
                             <motion.div
-                            layoutId='Navbar-indicator'
+                            layoutId='navbar-indicator'
                             className={`absolute -bottom-1 left-0
                             right-0 h-0.5 bg-linear-to-r rounded-full
                             ${colors.indicator}`}>
@@ -221,4 +221,4 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
     )
 }
 
-export default Navbar;
+export default navbar;
