@@ -9,10 +9,10 @@ import { DownloadIcon, Mail } from "lucide-react";
 
 const Hero = ({ darkMode = false }) => {
     const socialIcons = [
-        {icon: github, alt: 'Github'},
-        {icon: linkedin, alt: 'LinkedIn'},
-        {icon: facebook, alt: 'Facebook'},
-        {icon: instagram, alt: 'Instagram'},
+        {icon: github, alt: 'Github', href: 'https://github.com/NethmiDN'},
+        {icon: linkedin, alt: 'LinkedIn', href: 'https://www.linkedin.com/in/nethmi-nanayakkara-83a338223/'},
+        {icon: facebook, alt: 'Facebook', href: 'https://www.facebook.com/share/1DW3PdTpAo/'},
+        {icon: instagram, alt: 'Instagram', href: 'https://www.instagram.com/n_e_t_h_m_i_44?igsh=eGQzeDhibjRjajI0'},
 
     ];
 
@@ -47,8 +47,9 @@ const Hero = ({ darkMode = false }) => {
                     {socialIcons.map((social, index) => (
                         <a 
                         key = {index}
-                        href="#"
+                        href={social.href}
                         target="_blank"
+                        rel="noreferrer"
                         data-aos-delay = {`${400 + index * 100}`}
                         className="transform hover:scale-110 transition-transform duration-300">
                             <img 

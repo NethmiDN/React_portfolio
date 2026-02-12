@@ -1,4 +1,4 @@
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaHeart, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = ({darkMode}) => {
     const currentYear = new Date().getFullYear();
@@ -32,7 +32,9 @@ const Footer = ({darkMode}) => {
                 </div>
                 <div className="flex gap-4">
                     <a 
-                    href="#"
+                    href="https://github.com/NethmiDN"
+                    target="_blank"
+                    rel="noreferrer"
                     className="w-10 h-10 rounded-full flex items-center 
                     justify-center hover:scale-110 transition-all
                     hover:bg-linear-to-r hover:from-orange-500
@@ -42,7 +44,9 @@ const Footer = ({darkMode}) => {
                         <FaGithub />
                     </a>
                     <a 
-                    href="#"
+                    href="https://www.linkedin.com/in/nethmi-nanayakkara-83a338223/"
+                    target="_blank"
+                    rel="noreferrer"
                     className="w-10 h-10 rounded-full flex items-center 
                     justify-center hover:scale-110 transition-all
                     hover:bg-linear-to-r hover:from-orange-500
@@ -52,7 +56,9 @@ const Footer = ({darkMode}) => {
                         <FaLinkedin />
                     </a>
                     <a 
-                    href="#"
+                    href="https://www.facebook.com/share/1DW3PdTpAo/"
+                    target="_blank"
+                    rel="noreferrer"
                     className="w-10 h-10 rounded-full flex items-center 
                     justify-center hover:scale-110 transition-all
                     hover:bg-linear-to-r hover:from-orange-500
@@ -62,7 +68,9 @@ const Footer = ({darkMode}) => {
                         <FaFacebook />
                     </a>
                     <a 
-                    href="#"
+                    href="https://www.instagram.com/n_e_t_h_m_i_44?igsh=eGQzeDhibjRjajI0"
+                    target="_blank"
+                    rel="noreferrer"
                     className="w-10 h-10 rounded-full flex items-center 
                     justify-center hover:scale-110 transition-all
                     hover:bg-linear-to-r hover:from-orange-500
@@ -71,14 +79,24 @@ const Footer = ({darkMode}) => {
                     text-white dark:text-[#374151]">
                         <FaInstagram />
                     </a>
-
+                </div>
+                <div className="text-center md:text-right">
+                    <p className="text-sm flex items-center justify-end
+                    gap-1 text-[#6b7280] dark:text-[#9ca3af]">
+                        @ {currentYear} Made with
+                        <FaHeart className="text-red-500"/>
+                        by <span 
+                        className="mt-1 text-[#f97316]">
+                            Nethmi Nanayakkara
+                        </span>
+                    </p>
                 </div>
             </div>
 
         </div>
 
     </footer>
-  )
-}
+  );
+};
 
 export default Footer
