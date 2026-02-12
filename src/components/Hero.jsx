@@ -43,6 +43,26 @@ const Hero = ({ darkMode = false }) => {
         className='body-font z-10'>
             <div className= 'container mx-auto flex px-4 sm:px-8 lg:px-14 py-12 lg:py-14 flex-col lg:flex-row items-center justify-between lg:mt-14 mt-14'>
                 <div className='lg:w-1/2 w-full flex flex-col items-center lg:items-start text-center lg:text-left mb-12 lg:mb-0'>
+                <h1 className={`title-font text-3xl sm:text-4xl
+                    lg:text-5xl mb-4 font-bold ${theme.textPrimary}`}
+                    data-aos = 'fade-up'
+                    data-aos-delay = '500'>
+                        Hi, I'm Nethmi Nanayakkara
+                </h1>
+                <p className={`mb-6 sm:mb-8 leading-relaxed max-w-md
+                    sm:max-w-lg ${theme.textSecondary}`}
+                    data-aos='fade-up'
+                    data-os-dela='600'>
+                  As a Full-Stack Developer, I thrive on the 
+                  challenge of managing the entire lifecycle 
+                  of an application. From designing responsive 
+                  user interfaces to optimizing server-side 
+                  logic and databases, I focus on writing 
+                  clean, maintainable code. I am passionate 
+                  about leveraging modern technologies to solve 
+                  real-world problems and delivering scalable 
+                  solutions that provide value to users.  
+                </p>
                 <div className= 'flex justify-center lg:justify-start gap-4 sm:gap-6 mb-6 sm:mb-7 w-full'>
                     {socialIcons.map((social, index) => (
                         <a 
@@ -67,26 +87,6 @@ const Hero = ({ darkMode = false }) => {
                     ))}
 
                 </div>
-                <h1 className={`title-font text-3xl sm:text-4xl
-                    lg:text-5xl mb-4 font-bold ${theme.textPrimary}`}
-                    data-aos = 'fade-up'
-                    data-aos-delay = '500'>
-                        Hi, I'm Nethmi Nanayakkara
-                </h1>
-                <p className={`mb-6 sm:mb-8 leading-relaxed max-w-md
-                    sm:max-w-lg ${theme.textSecondary}`}
-                    data-aos='fade-up'
-                    data-os-dela='600'>
-                  As a Full-Stack Developer, I thrive on the 
-                  challenge of managing the entire lifecycle 
-                  of an application. From designing responsive 
-                  user interfaces to optimizing server-side 
-                  logic and databases, I focus on writing 
-                  clean, maintainable code. I am passionate 
-                  about leveraging modern technologies to solve 
-                  real-world problems and delivering scalable 
-                  solutions that provide value to users.  
-                </p>
                 {/* Buttons */}
                 <div className='w-full pt-4 sm:pt-6'>
                     <div className='flex flex-col sm:flex-row justify-center
