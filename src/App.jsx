@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import navbar from "./components/navbar";
+import Navbar from "./components/navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Hero from "./components/Hero";
@@ -43,7 +43,7 @@ const App = () => {
       ? "bg-linear-to-br from-gray-900 via-[#0d182e] to-gray-900 min-h-screen" 
       : 'bg-linear-to-br from-gray-50 min-h-screen'
     }>
-      <navbar darkMode= {darkMode} toggleDarkMode={toggleDarkMode} />
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero darkMode={darkMode} />
       <Skills darkMode={darkMode} />
       <Projects darkMode={darkMode} />

@@ -97,7 +97,7 @@ const Hero = ({ darkMode = false }) => {
                         <a href={CV} download className='w-full sm:w-auto'>
                             <button className='w-full sm:w-auto
                             inline-flex items-center justify-center text-white
-                            bg-gradient-to-r from-orange-500 to-amber-500 border-0
+                            bg-linear-to-r from-orange-500 to-amber-500 border-0
                             py-3 px-6 sm:px-8 hover:shadow-[0_0_30px_rgba(255,165,0,0.45)]
                             hover:-translate-y-0.5 rounded-full text-base sm:text-lg font-semibold transition-all
                             duration-300 transform'>
