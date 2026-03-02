@@ -29,8 +29,26 @@ const Skills = ({ darkMode }) => {
   return (
     <section id="skills" className={`min-h-screen overflow-hidden flex
     items-center justify-center px-4 sm:px-6`}>
-      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2
-      gap-8 sm:gap-12 items-center">
+      <div className="max-w-6xl w-full flex flex-col gap-10 sm:gap-12">
+        <header className="text-center">
+          <h2 
+              className='text-3xl sm:text-4xl font-bold mb-3'
+              style={{
+                  color: darkMode ? 'white' : '#1f2937'
+              }}>
+              My <span
+              style={{
+                  background: 'linear-gradient(to right, #f97316,  #f59e0b)',
+                  WebkitBackgroundClip: 'text' ,
+                  backgroundClip: 'text' ,
+                  color: 'transparent'
+              }}>
+                  Skills
+              </span>
+              </h2>
+        </header>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
         <figure
         data-aos = 'fade-up'
         data-aos-delay = '300'
@@ -53,23 +71,6 @@ const Skills = ({ darkMode }) => {
         data-aos-delay = '300'
         className='text-center relative order-l
         lg:order-2'>
-          <header>
-            <h2 
-                className='text-3xl sm:text-4xl font-bold mb-3'
-                style={{
-                    color: darkMode ? 'white' : '#1f2937'
-                }}>
-                My <span
-                style={{
-                    background: 'linear-gradient(to right, #f97316,  #f59e0b)',
-                    WebkitBackgroundClip: 'text' ,
-                    backgroundClip: 'text' ,
-                    color: 'transparent'
-                }}>
-                    Skills
-                </span>
-                </h2>
-            </header>
             <div className='flex flex-col gap-3 sm:gap-4 lg:gap-5 mb-6 sm:mb-8'>
               <div
                 className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 sm:gap-4'
@@ -101,6 +102,7 @@ const Skills = ({ darkMode }) => {
             </div>
         </article>
 
+      </div>
       </div>
 
     </section>
