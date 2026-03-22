@@ -44,11 +44,11 @@ const Projects = ({darkMode}) => {
         },
         {
             id: 5,
-            title: 'Pet Item Marketplace',
-            desc: 'Comprehensive pet marketplace Figma design with intuitive navigation, product showcases, streamlined checkout, categories, and pet profiles.',
+            title: 'Garment Management System',
+            desc: 'A comprehensive garment management system designed for efficient inventory tracking and streamlined production workflows.',
             image: project5 ,
-            tags: ['Figma', 'UI/UX Design', 'Prototyping'],
-            repo: 'https://www.figma.com/design/LEOKfxlZLN5YvF9OTGkgjV/Nethmi-Nanayakkara-GDSE72-SWE-Practical?node-id=0-1&t=pcBcxTsFUoTEDf8V-1'
+            tags: ['Java', 'MySQL', 'MVC Architecture', 'JasperReports'],
+            repo: 'https://github.com/NethmiDN/StitchWave-1st-Semester-Final-Project.git'
         },
         {
             id: 6,
